@@ -9,7 +9,7 @@ assignees: ''
 
 # Task
 
-## short
+## Short
 
 
 ## Describtion
@@ -22,6 +22,6 @@ assignees: ''
 - 
 - 
 
-StoryPoint:
+## StoryPoint:
 
 __N__
