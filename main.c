@@ -12,23 +12,31 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////
 
+// status Events
 #define WAIT 0
 #define EMPTY 1
 #define FILLING 2
 #define FULL 3
+
+// Directions
 #define RIGHT 0
 #define LEFT 1
+
+// Settings
 #define SENSORSET 10
 #define SPEED 40
 
+// Drinks
 #define WATER 0
 #define STRAWBERRY 1
 #define HOLUNDER 2
 
+// Sizes
 #define SMALL 0
 #define MEDIUM 1
 #define LARGE 3
 
+// Menu points
 #define DRINKSELECT 0
 #define SIZESELECT 1
 #define WORKINPROGRESS 2
@@ -46,8 +54,25 @@ int sensStart = 500;
 int sensFill = 500;
 int drink = 0;
 int size = 0;
-int menu = 0;
+int menu = DRINKSELECT;
 int cancel = 0;
+
+// Flankenerkennung
+int backLeft = 0;
+int backMiddle = 0;
+int backRight = 0;
+int backUp = 0;
+int backDown = 0;
+int nowLeft = 0;
+int nowMiddle = 0;
+int nowRight = 0;
+int nowUp = 0;
+int nowDown = 0;
+int triggerLeft = 0;
+int triggerMiddle = 0;
+int triggerRight = 0;
+int triggerUp = 0;
+int triggerDown = 0;
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -59,6 +84,7 @@ int cancel = 0;
 int MoveBelt(int setDirection, int setSpeed);
 int DispenseDrink(int chosenDrink, int drinkSize);
 void HandleMenu(void);
+void FlankHandler(void);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -73,7 +99,10 @@ task main(){
 	delay(2000);	// Wait 2 seconds
 
 	while(1){	// repeating loop
+
+		FlankHandler();
 		HandleMenu();
+
 		if (status != WAIT){	// Task active?
 
 			sensStart = getUSDistance(StartSens);
@@ -166,27 +195,24 @@ int DispenseDrink(int chosenDrink, int drinkSize){
 
 void HandleMenu(void){
 
-	while (!getButtonPress(buttonAny)) { }// Wait for a button press before exiting
-
-
 	switch (menu){
 
 		case DRINKSELECT:
 
 			drawBmpfile(0, 127, "chooseDrink");
-			if(getButtonPress(buttonLeft)){
+			if(triggerLeft){
 
 				menu = SIZESELECT;
 				drink = STRAWBERRY;
 
 			}
-			else if(getButtonPress(buttonEnter)){
+			else if(triggerMiddle){
 
 				menu = SIZESELECT;
 				drink = WATER;
 
 			}
-			else if(getButtonPress(buttonRight)){
+			else if(triggerRight){
 
 				menu = SIZESELECT;
 				drink = HOLUNDER;
@@ -198,25 +224,25 @@ void HandleMenu(void){
 		case SIZESELECT:
 
 			drawBmpfile(0, 127, "chooseSize");
-			if(getButtonPress(buttonLeft)){
+			if(triggerLeft){
 
 				menu = WORKINPROGRESS;
 				size = SMALL;
 
 			}
-			else if(getButtonPress(buttonEnter)){
+			else if(triggerMiddle){
 
 				menu = WORKINPROGRESS;
 				size = MEDIUM;
 
 			}
-			else if(getButtonPress(buttonRight)){
+			else if(triggerRight){
 
 				menu = WORKINPROGRESS;
 				size = LARGE;
 
 			}
-			else if(getButtonPress(buttonUp)|| getButtonPress(buttonDown)){
+			else if(triggerDown || triggerUp){
 
 				menu = DRINKSELECT;
 
@@ -225,9 +251,10 @@ void HandleMenu(void){
 
 		case WORKINPROGRESS:
 
-			drawBmpfile(0, 127, "workInProgress");
+		 drawBmpfile(0, 127, "workInProgress");
 
-		 if(getButtonPress(buttonEnter)){
+
+		 if(triggerMiddle){
 
 				menu = DRINKSELECT;
 				cancel = 1;
@@ -235,4 +262,71 @@ void HandleMenu(void){
 			}
 		break;
 	}
+
+	if ( status == FULL && sensStart <= SENSORSET){
+
+		menu = DRINKSELECT;
+		status = WAIT;
+
+	}
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	The FlankHandler is watching the button states and detects a change of the state of the
+//	five buttons. It is needed to prevent multiple detections.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+void FlankHandler(void){
+
+	nowLeft = getButtonPress(buttonLeft);
+	nowMiddle = getButtonPress(buttonEnter);
+	nowRight = getButtonPress(buttonRight);
+	nowUp = getButtonPress(buttonUp);
+	nowDown = getButtonPress(buttonDown);
+
+	if (nowLeft == 1 && backLeft == 0){
+
+		triggerLeft = 1;
+
+	}
+	else{ triggerLeft = 0; }
+
+	if (nowMiddle == 1 && backMiddle == 0){
+
+		triggerMiddle = 1;
+
+	}
+	else{ triggerMiddle = 0; }
+
+	if (nowRight == 1 && backRight == 0){
+
+		triggerRight = 1;
+
+	}
+	else{ triggerRight= 0; }
+
+	if (nowUp == 1 && backUp == 0){
+
+		triggerUp = 1;
+
+	}
+	else{ triggerUp= 0; }
+
+	if (nowDown == 1 && backDown == 0){
+
+		triggerDown = 1;
+
+	}
+	else{ triggerDown= 0; }
+
+	backLeft= nowLeft;
+	backMiddle=nowMiddle;
+	backRight =nowRight;
+	backUp = nowUp;
+	backDown = nowDown;
+
 }
