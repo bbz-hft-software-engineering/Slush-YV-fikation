@@ -1,5 +1,5 @@
 # Slush-YV-fikation
-HF Seminarweek for die machine "Tech-tonic Tab"
+HF Seminarweek for the machine "Tech-tonic Tab"
 
 ## Hardware Components
 This project needs:
@@ -10,7 +10,7 @@ This project needs:
 
 # Getting Started
 
-- build the machine with the buildplan 
+- build the machine with the blueprints and the photos 
 - download the file `Stable build V1.0.0` (Software) and every `.rgf` file (menu picture) from the repository
 - connect the Lego Mindstorm Brick with your pc
 - download the software file and the `.rgf` file on the Brick
@@ -18,10 +18,9 @@ This project needs:
 # Menu Interface
 
 After the booting up and initialising the menu Interface will be shown on the display of the Lego Mindstorm Brick.
-First choose the flavour of your drink with the button according to the picture.
-Next choose your cup size.
+First choose the flavour of your drink with the button according to the picture, then choose your cup size.
 The buttons with the describtion "USELESS" dont have function.
-If you want to cancle a menupoint press the cancle-button
+If you want to cancle the process press the `cancel`- button
 If you want to terminate the programm press the button direct under the display (not recommended)
 
 # Example
