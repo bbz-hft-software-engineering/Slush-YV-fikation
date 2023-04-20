@@ -1,0 +1,36 @@
+Slush_YV_fikation
+
+Code:
+switch(DRINKSELECT) -> Cases seem pretty simmilar maby create a function.
+
+comments
+
+URS:
+Non Functional Requirements: -> all requirements must be messurable
+
+Performance -> fill in x
+
+C4: The device must be compatible with standard glasses.
+-> what is a standart glass?
+
+FS:
+Performance -> fill in x
+
+
+Use Case -> make sure it fits the final product
+	- add/ remove wrong parts and explain why
+
+Used Hardware & Software:
+-> make sure it fits the final product
+
+The system is powered by 5 V USB Power via a USB charging brick. -> is that right?
+
+Softwaredescription
+-> make sure it fits the final product
+
+Daily SCRUM
+-> no documentation necessary but if its there keep it up to date
+
+Sprint_Review -> keep it up to date
+
+Sprint_Retrospektive -> tbd...
