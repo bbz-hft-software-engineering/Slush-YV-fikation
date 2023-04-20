@@ -8,14 +8,14 @@ This project needs:
 - Silicon tube
 - a cup or a glass
 
-## Getting Started
+# Getting Started
 
 - build the machine with the buildplan 
 - download the file `Stable build V1.0.0` (Software) and every `.rgf` file (menu picture) from the repository
 - connect the Lego Mindstorm Brick with your pc
 - download the software file and the `.rgf` file on the Brick
 
-## Menu Interface
+# Menu Interface
 
 After the booting up and initialising the menu Interface will be shown on the display of the Lego Mindstorm Brick.
 First choose the flavour of your drink with the button according to the picture.
