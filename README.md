@@ -1,7 +1,7 @@
 # Slush-YV-fikation
 HF Seminarweek for die machine "Tech-tonic Tab"
 
-## Hardwarekomponenten
+## Hardware Components
 This project needs:
 - Lego Mindstorm Ev3 Education kit
 - PET-Bottles
@@ -10,38 +10,23 @@ This project needs:
 
 ## Getting Started
 
-- down
-- Laden Sie die Datei Main.cpp from repository herunter.
-- Verbinden Sie Ihren Microbit mit ihrem Computer (Bluetooth oder Kabel möglich)
-- Laden Sie den heruntergeladenen Code auf Ihren Microbit.
+- build the machine with the buildplan 
+- download the file "" from the repository
+- connect the Lego Mindstorm Brick with your pc
+- download the software file om the Brick
 
-## Auslesen des 5x5 Pixelfeldes
-auf dem 5x5 Pixelfeld des Microbits werden die zahlen wie folgt angezeigt.
-- in der obersten Reihe werden die Zehnerstunden angezeigt.
-- in der zweit obersten Reihe werden die Einerstunden angezeigt.
-- die Mittlere Reihe ist die abtrennung von Stunden und Minuten.
-- in der zweit untersten Reihe werden die Zehnerminuten angezeigt.
-- in der untersten Reihe werden die Einerminuten angezeigt.
+## Menu Interface
 
-## Menüauswahl
-Um zur Menüauswahl zu gelangen drücke beide Knöpfe (Knopf A und Knopf B), bis der Text "Menu" auf dem 5x5 LED Feld erscheint.
-Mit dem ersten Menü wählt man zwischen Uhrzeit einstellen (Menu "0") oder Wecker einstellen (Menu "1").
-Anschliessend wird auf dem 5x5 LED Feld angezeigt, was eingestellt wird (z.B. H = Stunden oder M = Minuten). Wenn man die Zeit (Uhrzeit oder Weckzeit) fertig eingestellt hat, wird automatisch wieder zur Zeitanzeige gewechselt.
+After the booting up and initialising the menu Interface will be shown on the display of the Lego Mindstorm Brick.
+First choose the flavour of your drink with the button according to the picture.
+Next choose your cup size.
+The buttons with the describtion "USELESS" dont have function.
+If you want to cancle a menupoint press the cancle-button
+If you want to terminate the programm press the button direct under the display (not recommended)
 
-## Navigantion durch das Menü
-Die Navigation durch alle Menüs sind einheitlich. drücke Knopf B um den aktuellen Menüpunkt zu bestätigen und drücke Knopf A um Aktion auszuführen (wechsel zu einem anderen Menüpunkt oder eine Zahl um 1 zu erhöhen). 
+# Example
 
-### Der Wecker 
-Der Wecker ertönt eine Minute lang zur gewählten Uhrzeit.
-
-### Anzeige der Zahlen beim einstellen
-Man muss nicht zwingend jedes Mal warten bis die Zahl verschwunden ist, um die Zeit weiter einstellen zu können. Die letzte gesehene Zahl ist die aktuelle Wert.
-
-# Beispiel
-
-Man möchte die Uhrzeit neu einstellen.
-- Knopf A und B gleichzeitig drücken bis auf dem 5x5 Feld das Wort "Menu" erscheint.
-- Menüpunkt "0" auswählen und mit Knopf B bestätigen.
-- Den Kopf A soviel mal drücken bis gewünschte Zahl (in diesem Fall Stunden) anzeigt und mit Knopf B bestätigen => Stunden sind nun eingstellt.
-- Den Kopf A soviel mal drücken bis gewünschte Zahl (in diesem Fall Minuten) anzeigt und mit Knopf B bestätigen => Minuten sind nun eingstellt.
-Nun wird die eingestellte Uhrzeit auf dem Display und auf dem 5x5 Feld angezeigt.
+You want to a medium raspberry softdrink.
+Place your cup or glass on the conveyor belt so that the ultra-sonic sensor detects the container.
+Press the xxx button then the xxx button, after the booting up process.
+Wait for the machine to fill up your container and moving the container back to you.
