@@ -11,7 +11,7 @@ This project needs:
 ## Getting Started
 
 - build the machine with the buildplan 
-- download the file "Stable build V1.0.0" (Software) and every `.rgf` file (menu picture) from the repository
+- download the file `Stable build V1.0.0` (Software) and every `.rgf` file (menu picture) from the repository
 - connect the Lego Mindstorm Brick with your pc
 - download the software file and the `.rgf` file on the Brick
 
