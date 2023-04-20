@@ -15,8 +15,10 @@
 // status Events
 #define WAIT 0
 #define EMPTY 1
-#define FILLING 2
-#define FULL 3
+#define TRANSONE 2
+#define FILLING 3
+#define TRANSTWO 4
+#define FULL 5
 
 // Directions
 #define RIGHT 0
@@ -42,20 +44,20 @@
 #define SIZESELECT 1
 #define WORKINPROGRESS 2
 
-// Drink 1 Receipe in %
-#define D1L1 15
-#define D1L2 85
+// Drink 1 Receipe in % Water
+#define D1L1 0
+#define D1L2 100
 #define D1L3 0
 
-// Drink 2 Receipe in %
-#define D2L1 0
-#define D2L2 100
+// Drink 2 Receipe in % STRAWBERRY
+#define D2L1 50
+#define D2L2 50
 #define D2L3 0
 
-// Drink 3 Receipe in %
+// Drink 3 Receipe in % HOLUNDER
 #define D3L1 0
-#define D3L2 85
-#define D3L3 15
+#define D3L2 50
+#define D3L3 50
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -70,7 +72,6 @@ float sensFill = 500;
 int drink = 0;
 int size = 0;
 int menu = DRINKSELECT;
-int cancel = 0;
 
 int l1ready = 0;
 int l2ready = 0;
@@ -100,7 +101,6 @@ int triggerDown = 0;
 //
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-int MoveBelt(int setDirection, int setSpeed);
 int DispenseDrink(int chosenDrink, int drinkSize);
 void HandleMenu(void);
 void FlankHandler(void);
@@ -130,61 +130,46 @@ task main(){
 
 		if (status != WAIT){	// Task active?
 
-			if((status == EMPTY) && (SENSORSET < sensFill)){
+			if((status == EMPTY) && (SENSORSET < sensFill) && (SENSORSET > sensStart )){
 
-				status = MoveBelt(RIGHT,SPEED);
+				status = TRANSONE;
+				setMotorSpeed(BeltMot,SPEED);
 
 			}
-			if((status == EMPTY) && (SENSORSET > sensFill)){
+			if((status == TRANSONE) && (SENSORSET > sensFill)){
 
 				setMotorSpeed(BeltMot,0);
 				status = FILLING;
 
 			}
+
 			if(status == FILLING){
 
 				status = DispenseDrink(drink, size);
 
 			}
-			if((status == FULL) && (SENSORSET <= sensStart)){
 
-				status = MoveBelt(LEFT,SPEED);
+			if((status == FULL) && (SENSORSET > sensFill) && (SENSORSET < sensStart )){
+
+				setMotorSpeed(BeltMot,(SPEED * -1));
+				status = TRANSTWO;
 
 			}
 		}
-	}
-}
+		else{
 
-//////////////////////////////////////////////////////////////////////////////////////////////
-//
-//	The MoveBelt function controlls the motor for the belt system. It must be possible to set
-//	the direction and the speed of the belt.
-//	The movement must be stoped automaticly when the glass reches an endpoint.
-//
-//////////////////////////////////////////////////////////////////////////////////////////////
-
-int MoveBelt(int setDirection, int setSpeed){
-
-	if( setDirection == RIGHT){
-
-		if(SENSORSET >= sensStart  ){
-
-			setMotorSpeed(BeltMot,SPEED);
-			return EMPTY;
-
-		}
-	}
-	return EMPTY;
-	if(setDirection == LEFT){
-
-		if(SENSORSET <= sensFill ){
-
-			setMotorSpeed(BeltMot,(SPEED * -1));
-			return FULL;
+			setMotorSpeed(BeltMot,0);
+			l1ready = 0;
+			l2ready = 0;
+			l3ready = 0;
+			resetMotorEncoder(L1Mot);
+			resetMotorEncoder(L2Mot);
+			resetMotorEncoder(L3Mot);
 
 		}
 	}
 }
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -199,7 +184,7 @@ int DispenseDrink(int chosenDrink, int drinkSize){
  	int l2motget = getMotorEncoder(L2Mot);
 	int l3motget = getMotorEncoder(L3Mot);
 
-	switch(DRINKSELECT){
+	switch(drink){
 
 		case WATER:
 			if((size * D1L1 * CALFLOW) > l1motget){
@@ -239,7 +224,7 @@ int DispenseDrink(int chosenDrink, int drinkSize){
 
 
 		case STRAWBERRY:
-			if((size * D2L1) >= l1motget){
+			if((size * D2L1 * CALFLOW) > l1motget){
 
 				setMotorSpeed(L1Mot, 100);
 
@@ -250,7 +235,7 @@ int DispenseDrink(int chosenDrink, int drinkSize){
 				l1ready = 1;
 
 			}
-			if((size * D2L2) >= l2motget){
+			if((size * D2L2 * CALFLOW) > l2motget){
 
 				setMotorSpeed(L2Mot, 100);
 
@@ -261,7 +246,7 @@ int DispenseDrink(int chosenDrink, int drinkSize){
 				l2ready = 1;
 
 			}
-			if((size * D2L3) >= l3motget){
+			if((size * D2L3 * CALFLOW) > l3motget){
 
 				setMotorSpeed(L3Mot, 100);
 
@@ -273,8 +258,10 @@ int DispenseDrink(int chosenDrink, int drinkSize){
 
 			}
 		break;
+
+
 		case HOLUNDER:
-			if((size * D3L1) >= l1motget){
+			if((size * D3L1 * CALFLOW) > l1motget){
 
 				setMotorSpeed(L1Mot, 100);
 
@@ -285,7 +272,7 @@ int DispenseDrink(int chosenDrink, int drinkSize){
 				l1ready = 1;
 
 			}
-			if((size * D3L2) >= l2motget){
+			if((size * D3L2 * CALFLOW) > l2motget){
 
 				setMotorSpeed(L2Mot, 100);
 
@@ -296,7 +283,7 @@ int DispenseDrink(int chosenDrink, int drinkSize){
 				l2ready = 1;
 
 			}
-			if((size * D3L3) >= l3motget){
+			if((size * D3L3 * CALFLOW) > l3motget){
 
 				setMotorSpeed(L3Mot, 100);
 
@@ -400,20 +387,17 @@ void HandleMenu(void){
 		 if(triggerMiddle){
 
 				menu = DRINKSELECT;
-				cancel = 1;
+				status = WAIT;
 
 			}
 		break;
 	}
+		if ((status == TRANSTWO) && (SENSORSET > sensStart)  ){
 
-	if ((status == FULL) && sensStart < SENSORSET){
-
-		menu = DRINKSELECT;
-		status = WAIT;
-
+			status = WAIT;
+			menu = DRINKSELECT;
 
 	}
-
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
