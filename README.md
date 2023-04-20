@@ -1,3 +1,4 @@
 # Slush-YV-fikation
-HF Seminarwoche 
+HF Seminarweek for die machine "Tech-tonic Tab"
 
+# 
