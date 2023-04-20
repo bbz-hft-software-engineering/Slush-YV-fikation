@@ -11,9 +11,9 @@ This project needs:
 ## Getting Started
 
 - build the machine with the buildplan 
-- download the file "" from the repository
+- download the file "Stable build V1.0.0" (Software) and every `.rgf` file (menu picture) from the repository
 - connect the Lego Mindstorm Brick with your pc
-- download the software file om the Brick
+- download the software file and the `.rgf` file on the Brick
 
 ## Menu Interface
 
@@ -26,7 +26,7 @@ If you want to terminate the programm press the button direct under the display 
 
 # Example
 
-You want to a medium raspberry softdrink.
+You want to a medium strawberry softdrink.
 Place your cup or glass on the conveyor belt so that the ultra-sonic sensor detects the container.
-Press the xxx button then the xxx button, after the booting up process.
+Press the `left` button (for the Strawberry falvour) then the `middle` button (for the medium size), after the booting up process.
 Wait for the machine to fill up your container and moving the container back to you.
