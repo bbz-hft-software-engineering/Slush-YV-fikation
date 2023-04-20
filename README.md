@@ -6,7 +6,7 @@ This project needs:
 - Lego Mindstorm Ev3 Education kit
 - PET-Bottles
 - Silicon tube
-- a cup or a glass
+- Double rocks glass
 
 # Getting Started
 
