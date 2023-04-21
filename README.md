@@ -42,7 +42,7 @@ Wait for the machine to fill up your container and moving the container back to 
 [contributors-url]: https://github.com/bbz-hft-software-engineering/Slush-YV-fikation/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/bbz-hft-software-engineering/Slush-YV-fikation.svg?style=for-the-badge
 [forks-url]: https://github.com/bbz-hft-software-engineering/Slush-YV-fikation/network/members
-[stars-shield]: https://img.shields.io/github/stars/bbz-hft-software-engineering/Slush-YV-fikation/AtariBreakout.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/bbz-hft-software-engineering/Slush-YV-fikation.svg?style=for-the-badge
 [stars-url]: https://github.com/bbz-hft-software-engineering/Slush-YV-fikation/stargazers
 [issues-shield]: https://img.shields.io/github/issues/bbz-hft-software-engineering/Slush-YV-fikation.svg?style=for-the-badge
 [issues-url]: https://github.com/bbz-hft-software-engineering/Slush-YV-fikation/issues
