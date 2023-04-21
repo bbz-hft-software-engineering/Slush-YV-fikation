@@ -9,6 +9,7 @@
 # Slush-YV-fikation
 Documentation for the syrup dispenser machine.
 The Project was created in the HF Seminarweek for the machine "Tech-tonic Tab"
+!Front_image.jpg
 
 
 ## Hardware Components
