@@ -13,7 +13,7 @@ The Project was created in the HF Seminarweek for the machine "Tech-tonic Tab"
 
 ## Hardware Components
 This project needs:
-- Lego Mindstorm Ev3 Education kit
+- Lego Mindstorm Ev3 Education kits
 - PET-Bottles
 - Silicon tube
 - Double rocks glass
