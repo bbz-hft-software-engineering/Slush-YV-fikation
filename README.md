@@ -7,7 +7,9 @@
 
 
 # Slush-YV-fikation
-HF Seminarweek for the machine "Tech-tonic Tab"
+Documentation for the syrup dispenser machine.
+The Project was created in the HF Seminarweek for the machine "Tech-tonic Tab"
+
 
 ## Hardware Components
 This project needs:
