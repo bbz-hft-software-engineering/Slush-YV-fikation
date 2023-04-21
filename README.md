@@ -1,3 +1,11 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+
+
 # Slush-YV-fikation
 HF Seminarweek for the machine "Tech-tonic Tab"
 
@@ -29,3 +37,14 @@ You want to a medium strawberry softdrink.
 Place your cup or glass on the conveyor belt so that the ultra-sonic sensor detects the container.
 Press the `left` button (for the Strawberry falvour) then the `middle` button (for the medium size), after the booting up process.
 Wait for the machine to fill up your container and moving the container back to you.
+
+[contributors-shield]: https://img.shields.io/github/contributors/bbz-hft-software-engineering/Slush-YV-fikation.svg?style=for-the-badge
+[contributors-url]: https://github.com/bbz-hft-software-engineering/Slush-YV-fikation/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/bbz-hft-software-engineering/Slush-YV-fikation.svg?style=for-the-badge
+[forks-url]: https://github.com/bbz-hft-software-engineering/Slush-YV-fikation/network/members
+[stars-shield]: https://img.shields.io/github/stars/bbz-hft-software-engineering/Slush-YV-fikation/AtariBreakout.svg?style=for-the-badge
+[stars-url]: https://github.com/bbz-hft-software-engineering/Slush-YV-fikation/stargazers
+[issues-shield]: https://img.shields.io/github/issues/bbz-hft-software-engineering/Slush-YV-fikation.svg?style=for-the-badge
+[issues-url]: https://github.com/bbz-hft-software-engineering/Slush-YV-fikation/issues
+[license-shield]: https://img.shields.io/github/license/bbz-hft-software-engineering/Slush-YV-fikation.svg?style=for-the-badge
+[license-url]: https://github.com/bbz-hft-software-engineering/Slush-YV-fikation/LICENSE.txt
