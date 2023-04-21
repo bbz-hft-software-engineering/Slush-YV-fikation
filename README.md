@@ -8,7 +8,8 @@
 
 # Slush-YV-fikation
 Documentation for the syrup dispenser machine.
-The Project was created in the HF Seminarweek for the machine "Tech-tonic Tab"
+The Project was created in the HF Seminarweek for the machine "Tech-tonic Tab" <br>
+
 ![Front_image](https://user-images.githubusercontent.com/118005268/233599928-6e0f7159-7ffe-4e6c-9adf-c86a6d065ef6.jpg)
 
 
