@@ -1,0 +1,64 @@
+BLItemNo,ElementId,LdrawId,PartName,BLColorId,LDrawColorId,ColorName,ColorCategory,Qty,Weight
+2780,6279875,2780,"Technic, Pin with Short Friction Ridges",11,0,Black,Solid Colors,265,0.16
+32009,6271161,32009,"Technic, Liftarm, Modified Bent Thick 1 x 11.5 Double",1,15,White,Solid Colors,18,3.46
+32013,6284699,32013,"Technic, Axle and Pin Connector Angled #1",11,0,Black,Solid Colors,18,0.46
+32014,6268905,32014,"Technic, Axle and Pin Connector Angled #6 - 90 degrees",11,0,Black,Solid Colors,2,0.66
+32034,6271869,32034,"Technic, Axle and Pin Connector Angled #2 - 180 degrees",11,0,Black,Solid Colors,7,0.68
+32054,6347789,32054,"Technic, Pin 3L with Friction Ridges and Stop Bush",5,4,Red,Solid Colors,48,0.33
+32062,4142865,32062,"Technic, Axle  2L Notched",5,4,Red,Solid Colors,14,0.26
+32073,4114740,32073,"Technic, Axle  5L",11,0,Black,Solid Colors,9,0.66
+32073,4211639,32073,"Technic, Axle  5L",86,71,Light Bluish Gray,Solid Colors,4,0.66
+4265c,6271167,4265c,Technic Bush 1/2 Smooth,3,14,Yellow,Solid Colors,14,0.1
+32140,6271827,32140,"Technic, Liftarm, Modified Bent Thick L-Shape 2 x 4",5,4,Red,Solid Colors,2,1.43
+32184,6276951,32184,"Technic, Axle and Pin Connector Perpendicular 3L with Center Pin Hole",11,0,Black,Solid Colors,8,0.64
+32278,4542578,32278,"Technic, Liftarm Thick 1 x 15",1,15,White,Solid Colors,32,4.0
+32316,4211651,32316,"Technic, Liftarm Thick 1 x 5",86,71,Light Bluish Gray,Solid Colors,1,1.21
+32348,6278132,32348,"Technic, Liftarm, Modified Bent Thick 1 x 7 (4 - 4)",1,15,White,Solid Colors,17,2.0
+32523,4142822,32523,"Technic, Liftarm Thick 1 x 3",11,0,Black,Solid Colors,2,0.7
+32523,,32523,"Technic, Liftarm Thick 1 x 3",36,10,Bright Green,Solid Colors,13,0.7
+32523,4153718,32523,"Technic, Liftarm Thick 1 x 3",5,4,Red,Solid Colors,11,0.7
+32523,4509376,32523,"Technic, Liftarm Thick 1 x 3",7,1,Blue,Solid Colors,9,0.7
+32524,4495930,32524,"Technic, Liftarm Thick 1 x 7",86,71,Light Bluish Gray,Solid Colors,17,1.74
+32525,4611705,32525,"Technic, Liftarm Thick 1 x 11",86,71,Light Bluish Gray,Solid Colors,16,2.8
+32526,4585040,32526,"Technic, Liftarm, Modified Bent Thick L-Shape 3 x 5",1,15,White,Solid Colors,7,1.77
+32526,4211713,32526,"Technic, Liftarm, Modified Bent Thick L-Shape 3 x 5",86,71,Light Bluish Gray,Solid Colors,3,1.77
+3648,6133119,3648,"Technic, Gear 24 Tooth with 1 Axle Hole",85,72,Dark Bluish Gray,Solid Colors,4,1.231
+3705,370526,3705,"Technic, Axle  4L",11,0,Black,Solid Colors,11,0.6
+3707,370726,3707,"Technic, Axle  8L",11,0,Black,Solid Colors,2,1.18
+3708,370826,3708,"Technic, Axle 12L",11,0,Black,Solid Colors,1,1.83
+3713,6275844,3713,Technic Bush,86,71,Light Bluish Gray,Solid Colors,17,0.14
+40490,6102449,40490,"Technic, Liftarm Thick 1 x 9",86,71,Light Bluish Gray,Solid Colors,21,2.59
+41239,4522934,41239,"Technic, Liftarm Thick 1 x 13",86,71,Light Bluish Gray,Solid Colors,10,3.3
+41678,4162857,41678,"Technic, Axle and Pin Connector Perpendicular Double Split",11,0,Black,Solid Colors,2,0.83
+4185,6321744,4185,Technic Wedge Belt Wheel (Pulley),85,72,Dark Bluish Gray,Solid Colors,36,0.97
+42003,6273715,42003,"Technic, Axle and Pin Connector Perpendicular 3L with 2 Pin Holes",85,72,Dark Bluish Gray,Solid Colors,11,0.77
+43093,4206482,43093,"Technic, Axle  1L with Pin with Friction Ridges",7,1,Blue,Solid Colors,55,0.26
+44294,4211805,44294,"Technic, Axle  7L",86,71,Light Bluish Gray,Solid Colors,4,1.05
+44809,6008527,44809,"Technic, Pin Connector Perpendicular 2 x 2 Bent",5,4,Red,Solid Colors,4,0.5
+4519,4211815,4519,"Technic, Axle  3L",86,71,Light Bluish Gray,Solid Colors,12,0.43
+45590,4198367,45590,"Technic, Axle Connector Double - Flexible Rubber",11,0,Black,Solid Colors,6,0.59
+48989,6282158,48989,"Technic, Pin Connector Perpendicular 3L with 4 Pins",86,71,Light Bluish Gray,Solid Colors,19,1.22
+55013,4499858,55013,"Technic, Axle  8L with Stop",85,72,Dark Bluish Gray,Solid Colors,5,1.18
+55615,6313453,55615,"Technic, Pin Connector Perpendicular 3 x 3 Bent with 4 Pins",86,71,Light Bluish Gray,Solid Colors,3,1.9
+57518,6325504,57518,"Technic, Link Tread Wide with 2 Pin Holes",11,0,Black,Solid Colors,166,1.35
+57519,4582792,57519,Technic Tread Sprocket Wheel Large,11,0,Black,Solid Colors,4,5.1
+57585,4502595,57585,"Technic, Axle Connector Hub with 3 Axles",86,71,Light Bluish Gray,Solid Colors,6,0.65
+6538c,4513174,6538c,"Technic, Axle Connector 2L (Smooth with x Hole + Orientation)",5,4,Red,Solid Colors,6,0.4
+60483,6265091,60483,"Technic, Liftarm Thick 1 x 2 - Axle Hole",11,0,Black,Solid Colors,12,0.46
+60484,4552347,60484,"Technic, Liftarm, Modified T-Shape Thick 3 x 3",11,0,Black,Solid Colors,13,1.19
+62462,6173127,62462,"Technic, Pin Connector Round 2L with Slot (Pin Joiner Round)",86,71,Light Bluish Gray,Solid Colors,2,0.42
+63869,6331441,63869,"Technic, Axle and Pin Connector Perpendicular Triple",86,71,Light Bluish Gray,Solid Colors,12,1.05
+64178,4540797,64178,"Technic, Liftarm, Modified Frame Thick 5 x 11 Open Center",86,71,Light Bluish Gray,Solid Colors,4,7.0
+64179,4539880,64179,"Technic, Liftarm, Modified Frame Thick 5 x 7 Open Center",86,71,Light Bluish Gray,Solid Colors,14,5.3
+6536,6261375,6536,"Technic, Axle and Pin Connector Perpendicular",86,71,Light Bluish Gray,Solid Colors,13,0.39
+6558,6299413,6558,"Technic, Pin 3L with Friction Ridges",7,1,Blue,Solid Colors,102,0.31
+6629,6279881,6629,"Technic, Liftarm, Modified Bent Thick 1 x 9 (6 - 4)",11,0,Black,Solid Colors,4,2.6
+87082,6321303,87082,"Technic, Pin 3L with Friction Ridges and Center Pin Hole",86,71,Light Bluish Gray,Solid Colors,2,0.5
+87083,6083620,87083,"Technic, Axle  4L with Stop",85,72,Dark Bluish Gray,Solid Colors,4,0.59
+94925,4640536,94925,"Technic, Gear 16 Tooth (Second Version - Reinforced)",86,71,Light Bluish Gray,Solid Colors,4,0.7
+95646c01,,95646c01,Mindstorms EV3 - Complete Brick,1,15,White,Solid Colors,1,180
+95652,,95652,"Electric Sensor, Ultrasonic - EV3",1,15,White,Solid Colors,2,24
+95658,,95658,"Electric, Motor EV3, Large",1,15,White,Solid Colors,4,80.7
+,,,,,,,,,
+Total qty,Total Weight,,,,,,,,
+1135,1642.264,,,,,,,,
